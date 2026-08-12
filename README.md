@@ -2,298 +2,298 @@
 
 ![OpenMC](build/icon.png)
 
-# OpenMC — Launcher Minecraft communautaire
+# OpenMC — Community Minecraft Launcher
 
-**Le launcher simple, rapide et gratuit pour jouer sur ton serveur Minecraft préféré.**
+**The simple, fast and free launcher to play on your favorite Minecraft server.**
 
 [![Version](https://img.shields.io/github/v/release/youtsuhodev/OpenMC?style=for-the-badge&label=Version&color=ffaa00)](https://github.com/youtsuhodev/OpenMC/releases)
 [![Build](https://img.shields.io/github/actions/workflow/status/youtsuhodev/OpenMC/build.yml?style=for-the-badge&label=Build&color=00b8c9)](https://github.com/youtsuhodev/OpenMC/actions)
-[![Licence](https://img.shields.io/github/license/youtsuhodev/OpenMC?style=for-the-badge&label=Licence&color=3ddc84)](LICENSE)
-[![Plateformes](https://img.shields.io/badge/Windows-macOS-Linux-blue?style=for-the-badge&color=5c6779)](https://github.com/youtsuhodev/OpenMC/releases)
+[![License](https://img.shields.io/github/license/youtsuhodev/OpenMC?style=for-the-badge&label=License&color=3ddc84)](LICENSE)
+[![Platforms](https://img.shields.io/badge/Windows-macOS-Linux-blue?style=for-the-badge&color=5c6779)](https://github.com/youtsuhodev/OpenMC/releases)
 
 </div>
 
 ---
 
-## Table des matières
+## Table of Contents
 
-- [À propos](#-à-propos)
-- [Fonctionnalités](#-fonctionnalités)
+- [About](#-about)
+- [Features](#-features)
 - [Installation](#-installation)
-- [Utilisation](#-utilisation)
-- [Compiler depuis les sources](#-compiler-depuis-les-sources)
-- [Créer une version (release)](#-créer-une-version-release)
+- [Usage](#-usage)
+- [Build from Source](#-build-from-source)
+- [Creating a Release](#-creating-a-release)
 - [Configuration](#-configuration)
-- [Structure du projet](#-structure-du-projet)
-- [Dépannage](#-dépannage)
-- [Contribution](#-contribution)
-- [Licence](#-licence)
+- [Project Structure](#-project-structure)
+- [Troubleshooting](#-troubleshooting)
+- [Contributing](#-contributing)
+- [License](#-license)
 
 ---
 
-## ✦ À propos
+## ✦ About
 
-**OpenMC** est un launcher **cracké** (mode hors ligne) pour Minecraft Java. Tu entres un pseudo, tu choisis ta RAM et ta version, tu cliques sur **Jouer** : le jeu se télécharge, se lance et se connecte automatiquement au serveur configuré.
+**OpenMC** is a **cracked** (offline mode) launcher for Minecraft Java. Enter a username, pick your RAM and version, hit **Play**: the game downloads, launches and automatically connects to the configured server.
 
-| Caractéristique | Valeur |
+| Feature | Value |
 | :--- | :--- |
-| Authentification | Pseudo (hors ligne) |
-| Versions supportées | Vanilla récentes (dernière release automatique) |
-| Runtime Java | Java 25 téléchargé automatiquement si absent |
-| Téléchargement | Auto (Mojang + librairies + ressources) |
-| Mises à jour | Automatiques via GitHub Releases |
+| Authentication | Username (offline) |
+| Supported versions | Recent vanilla (latest release auto-detected) |
+| Java runtime | Java 25 downloaded automatically when missing |
+| Download | Automatic (Mojang + libraries + assets) |
+| Updates | Automatic via GitHub Releases |
 
-> **Note** : OpenMC n'est **pas affilié à Mojang AB ni à Microsoft**. Minecraft est une marque déposée de Mojang AB.
+> **Note** : OpenMC is **not affiliated with Mojang AB or Microsoft**. Minecraft is a trademark of Mojang AB.
 
 ---
 
-## ✦ Fonctionnalités
+## ✦ Features
 
-- **Lancement en 1 clic** — téléchargement et connexion automatique au serveur
-- **Mode hors ligne (crack)** — joue avec n'importe quel pseudo
-- **Téléchargement intelligent du Java 25** si aucune installation compatible
-- **Gestion de la RAM** — curseur de 2 à 16 Go
-- **Choix de la version** — dernière release ou version spécifique
-- **Statut du launcher en temps réel** — progression des téléchargements
-- **Discord Rich Presence** — « Joue sur OpenMC » sur ton profil
-- **Auto-update** — mises à jour proposées et installées automatiquement
-- **Fond d'écran personnalisable** — choisis ta propre image
-- **Actualités** — flux distant configurable
+- **One-click launch** — automatic download and server connection
+- **Offline (cracked) mode** — play with any username
+- **Smart Java 25 download** when no compatible installation exists
+- **RAM management** — slider from 2 to 16 GB
+- **Version picker** — latest release or a specific version
+- **Real-time progress** — download status and progress bar
+- **Discord Rich Presence** — "Playing OpenMC" on your profile
+- **Auto-update** — updates detected and installed automatically
+- **Custom wallpaper** — choose your own background image
+- **News feed** — configurable remote feed
 - **Cross-platform** — Windows, macOS, Linux
-- **Installeur complet** — assistant NSIS avec image, licence et étapes
+- **Full installer** — NSIS wizard with image, license and steps
 
-### Écrans
+### Screens
 
-| Accueil | Réglages | Actualités |
+| Home | Settings | News |
 | :---: | :---: | :---: |
-| Pseudo + Jouer + RAM | RAM, résolution, Java, JVM | Flux d'actualités |
+| Username + Play + RAM | RAM, resolution, Java, JVM | News feed |
 
 ---
 
 ## ✦ Installation
 
-Télécharge le dernier installateur depuis la page **[Releases](https://github.com/youtsuhodev/OpenMC/releases)**.
+Download the latest installer from the **[Releases](https://github.com/youtsuhodev/OpenMC/releases)** page.
 
-| Plateforme | Fichier | Installation |
+| Platform | File | Install |
 | :--- | :--- | :--- |
-| **Windows** | `OpenMC Setup <version>.exe` | Suis l'assistant (image, licence, dossier) |
-| **macOS** | `OpenMC-<version>.dmg` | Glisse l'app dans Applications |
-| **Linux** | `OpenMC-<version>.AppImage` | `chmod +x` puis exécute |
+| **Windows** | `OpenMC Setup <version>.exe` | Follow the wizard (image, license, folder) |
+| **macOS** | `OpenMC-<version>.dmg` | Drag the app into Applications |
+| **Linux** | `OpenMC-<version>.AppImage` | `chmod +x` then run |
 
-> **Windows** : l'installeur n'est pas signé. Si un écran bleu apparaît, clique sur
-> **Plus d'informations → Exécuter quand même**.
-
----
-
-## ✦ Utilisation
-
-1. Lance **OpenMC**.
-2. Saisis ton **pseudo** (3 à 16 caractères, lettres/chiffres/`_`).
-3. Choisis ta **version** et ta **RAM**.
-4. Clique sur **Jouer**.
-5. Le jeu se télécharge (première fois), se lance et rejoint le serveur automatiquement.
-
-> **Astuce** : si tu joues sur un serveur avec AuthMe, enregistre-toi en jeu avec `/register <motdepasse> <motdepasse>`.
+> **Windows** : the installer is not signed. If a blue screen appears, click
+> **More info → Run anyway**.
 
 ---
 
-## ✦ Compiler depuis les sources
+## ✦ Usage
 
-### Prérequis
+1. Launch **OpenMC**.
+2. Enter your **username** (3 to 16 chars, letters/digits/`_`).
+3. Pick your **version** and **RAM**.
+4. Click **Play**.
+5. The game downloads (first time), launches and joins the server automatically.
 
-- [Node.js](https://nodejs.org) 20 ou plus
+> **Tip** : if the server uses AuthMe, register in-game with `/register <password> <password>`.
+
+---
+
+## ✦ Build from Source
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org) 20 or later
 - npm 10+
 
-### Étapes
+### Steps
 
 ```bash
-# 1. Cloner le dépôt
+# 1. Clone the repository
 git clone https://github.com/youtsuhodev/OpenMC.git
 cd OpenMC
 
-# 2. Installer les dépendances
+# 2. Install dependencies
 npm install
 
-# 3. Lancer en développement (rechargement à chaud de l'UI)
+# 3. Run in development mode (hot-reload UI)
 npm run dev
 
-# 4. Build de production
+# 4. Production build
 npm run build
 npm start
 ```
 
-### Commandes utiles
+### Useful Commands
 
-| Commande | Description |
+| Command | Description |
 | :--- | :--- |
-| `npm run dev` | Lance le launcher en mode développement |
-| `npm run build` | Compile le processus principal + l'interface |
-| `npm run lint` | Vérifie le code (ESLint) |
-| `npm run typecheck` | Vérifie les types TypeScript |
-| `npm run dist` | Génère l'installeur Windows |
-| `npm run dist:mac` | Génère l'installeur macOS |
-| `npm run dist:linux` | Génère l'AppImage Linux |
+| `npm run dev` | Run the launcher in development mode |
+| `npm run build` | Build main process + renderer |
+| `npm run lint` | Lint the code (ESLint) |
+| `npm run typecheck` | TypeScript type checking |
+| `npm run dist` | Build the Windows installer |
+| `npm run dist:mac` | Build the macOS installer |
+| `npm run dist:linux` | Build the Linux AppImage |
 
 ---
 
-## ✦ Créer une version (release)
+## ✦ Creating a Release
 
-Un **workflow GitHub Actions** construit et publie automatiquement les installateurs.
+A **GitHub Actions workflow** automatically builds and publishes all installers.
 
 ```bash
 git tag v1.0.1
 git push origin v1.0.1
 ```
 
-Ce qui se passe ensuite :
+What happens next :
 
 ```mermaid
 graph LR
-    A[Tag v1.0.1] --> B[Workflow GitHub Actions]
+    A[Tag v1.0.1] --> B[GitHub Actions workflow]
     B --> C[Windows .exe]
     B --> D[macOS .dmg]
     B --> E[Linux .AppImage]
     C --> F[GitHub Release]
     D --> F
     E --> F
-    F --> G[Le launcher détecte la mise à jour]
+    F --> G[Launcher detects the update]
 ```
 
-- La version est lue depuis le tag (`v1.0.1` → `1.0.1`).
-- Les fichiers `latest*.yml` sont publiés pour l'**auto-update**.
-- Les installateurs sont aussi déposés en *artifacts*.
+- The version is read from the tag (`v1.0.1` → `1.0.1`).
+- The `latest*.yml` files are published for **auto-update**.
+- The installers are also uploaded as *artifacts*.
 
 ---
 
 ## ✦ Configuration
 
-Toutes les valeurs de réglage se trouvent dans `src/shared/constants.ts` :
+All settings live in `src/shared/constants.ts` :
 
-| Constante | Rôle |
+| Constant | Role |
 | :--- | :--- |
-| `SERVER_IP` / `SERVER_PORT` | Adresse du serveur par défaut (vide = à renseigner dans les Réglages) |
-| `DISCORD_CLIENT_ID` | ID public de l'application Discord (Rich Presence) |
-| `JAVA_MIN_VERSION` | Version Java minimale exigée |
-| `ADOPTIUM_API` | Source de téléchargement du runtime Java |
+| `SERVER_IP` / `SERVER_PORT` | Default server address (empty = set in Settings) |
+| `DISCORD_CLIENT_ID` | Public Discord application ID (Rich Presence) |
+| `JAVA_MIN_VERSION` | Minimum required Java version |
+| `ADOPTIUM_API` | Source used to download the Java runtime |
 
-Le joueur peut aussi ajuster depuis l'UI (Réglages) :
+Players can also adjust from the UI (Settings) :
 
-- RAM allouée
-- Version du jeu
-- Résolution et plein écran
-- Arguments JVM supplémentaires
-- Adresse du serveur
-- Presence Discord
-- Fond d'écran
-- URL du flux d'actualités
+- Allocated RAM
+- Game version
+- Resolution and fullscreen
+- Extra JVM arguments
+- Server address
+- Discord presence
+- Wallpaper
+- News feed URL
 
-### Flux d'actualités
+### News feed
 
-Configure l'URL d'un JSON de ce type dans les Réglages :
+Set the URL of a JSON like this in Settings :
 
 ```json
 [
   {
-    "title": "Nouvelle saison !",
+    "title": "New season!",
     "date": "2026-08-12",
-    "content": "La saison 5 est ouverte, rejoignez-nous !"
+    "content": "Season 5 is open, come join us!"
   }
 ]
 ```
 
 ---
 
-## ✦ Structure du projet
+## ✦ Project Structure
 
 ```text
 openmc-launcher/
 ├── .github/workflows/
-│   └── build.yml              # Build auto Win/macOS/Linux sur tag v*
-├── build/                     # Assets de l'installeur
-│   ├── icon.png               # Icône de l'application
-│   ├── installerSidebar.bmp   # Image latérale de l'assistant
-│   ├── installer.nsh          # Script NSIS personnalisé
-│   └── license.txt            # Page de licence
+│   └── build.yml              # Auto-build Win/macOS/Linux on v* tags
+├── build/                     # Installer assets
+│   ├── icon.png               # Application icon
+│   ├── installerSidebar.bmp   # Wizard sidebar image
+│   ├── installer.nsh          # Custom NSIS script
+│   └── license.txt            # License page
 ├── src/
-│   ├── main/                  # Processus principal Electron
-│   │   ├── index.ts           # Fenêtre, lifecycle
-│   │   ├── ipc.ts             # Handlers IPC
-│   │   ├── launch.ts          # Téléchargement & lancement du jeu
-│   │   ├── java.ts            # Détection / téléchargement du Java
-│   │   ├── settings.ts        # Réglages persistés
-│   │   ├── news.ts            # Flux d'actualités
-│   │   ├── discord.ts         # Rich Presence (IPC natif)
+│   ├── main/                  # Electron main process
+│   │   ├── index.ts           # Window, lifecycle
+│   │   ├── ipc.ts             # IPC handlers
+│   │   ├── launch.ts          # Game download & launch
+│   │   ├── java.ts            # Java detection / download
+│   │   ├── settings.ts        # Persisted settings
+│   │   ├── news.ts            # News feed
+│   │   ├── discord.ts         # Rich Presence (native IPC)
 │   │   └── updates.ts         # Auto-update
-│   ├── preload/               # Pont sécurisé (contextBridge)
-│   ├── renderer/              # Interface React
+│   ├── preload/               # Secure bridge (contextBridge)
+│   ├── renderer/              # React UI
 │   │   ├── components/        # PlayPanel, Settings, News, Toasts...
 │   │   ├── App.tsx
 │   │   └── styles.css
-│   └── shared/                # Types & constantes partagés
+│   └── shared/                # Shared types & constants
 ├── scripts/
-│   └── dev.mjs                # Script de développement
+│   └── dev.mjs                # Development script
 ├── package.json
 └── vite.config.mjs
 ```
 
-### Stack technique
+### Tech Stack
 
-| Technologie | Utilisation |
+| Technology | Usage |
 | :--- | :--- |
-| [Electron](https://www.electronjs.org) | Framework desktop |
-| [React](https://react.dev) + [Vite](https://vitejs.dev) | Interface utilisateur |
-| [TypeScript](https://www.typescriptlang.org) | Langage |
-| [minecraft-launcher-core](https://www.npmjs.com/package/minecraft-launcher-core) | Téléchargement & lancement du jeu |
-| [electron-builder](https://www.electron.build) | Packaging / installeurs |
-| [Bootstrap Icons](https://icons.getbootstrap.com) | Icônes de l'interface |
+| [Electron](https://www.electronjs.org) | Desktop framework |
+| [React](https://react.dev) + [Vite](https://vitejs.dev) | User interface |
+| [TypeScript](https://www.typescriptlang.org) | Language |
+| [minecraft-launcher-core](https://www.npmjs.com/package/minecraft-launcher-core) | Game download & launch |
+| [electron-builder](https://www.electron.build) | Packaging / installers |
+| [Bootstrap Icons](https://icons.getbootstrap.com) | UI icons |
 
 ---
 
-## ✦ Dépannage
+## ✦ Troubleshooting
 
-| Problème | Solution |
+| Problem | Solution |
 | :--- | :--- |
-| Le jeu ne se lance pas | Vérifie la connexion internet et ta RAM allouée |
-| « Pseudo invalide » | 3 à 16 caractères, lettres/chiffres/`_` uniquement |
-| Le jeu se ferme au démarrage | Assure-toi d'avoir une version de Java récente ou laisse OpenMC en télécharger une |
-| Pas de connexion au serveur | Renseigne l'adresse dans **Réglages → Adresse du serveur** |
-| Windows bloque l'installation | **Plus d'informations → Exécuter quand même** (installateur non signé) |
-| Discord : rien ne s'affiche | Active la Presence Discord dans les Réglages |
+| The game won't launch | Check your internet connection and allocated RAM |
+| "Invalid username" | 3 to 16 chars, letters/digits/`_` only |
+| The game closes on startup | Make sure you have a recent Java or let OpenMC download one |
+| No server connection | Set the address in **Settings → Server address** |
+| Windows blocks the installer | **More info → Run anyway** (unsigned installer) |
+| Discord shows nothing | Enable Discord presence in Settings |
 
 ---
 
-## ✦ Contribution
+## ✦ Contributing
 
-Les contributions sont les bienvenues !
+Contributions are welcome!
 
-- [ ] Signale un bug via une **issue**
-- [ ] Propose une amélioration
-- [ ] Ouvre une **pull request**
+- [ ] Report a bug via an **issue**
+- [ ] Suggest an improvement
+- [ ] Open a **pull request**
 
 ```bash
-# Workflow recommandé
-git checkout -b feature/ma-fonctionnalite
-# ... tes modifications ...
+# Recommended workflow
+git checkout -b feature/my-feature
+# ... your changes ...
 npm run lint
 npm run typecheck
 npm run build
-git push origin feature/ma-fonctionnalite
+git push origin feature/my-feature
 ```
 
 ---
 
-## ✦ Licence
+## ✦ License
 
-Distribué sous licence **MIT**. Voir le fichier [LICENSE](LICENSE) pour plus d'informations.
+Distributed under the **MIT** license. See the [LICENSE](LICENSE) file for details.
 
-**Minecraft** et les noms associés appartiennent à **Mojang AB / Microsoft**. Ce projet est un projet communautaire indépendant, sans affiliation officielle.
+**Minecraft** and associated names belong to **Mojang AB / Microsoft**. This project is an independent community project with no official affiliation.
 
 ---
 
 <div align="center">
 
-**Fait avec passion pour la communauté Minecraft.**
+**Built with passion for the Minecraft community.**
 
-[Releases](https://github.com/youtsuhodev/OpenMC/releases) · [Issues](https://github.com/youtsuhodev/OpenMC/issues) · [Dépôt](https://github.com/youtsuhodev/OpenMC)
+[Releases](https://github.com/youtsuhodev/OpenMC/releases) · [Issues](https://github.com/youtsuhodev/OpenMC/issues) · [Repository](https://github.com/youtsuhodev/OpenMC)
 
 </div>
