@@ -1,6 +1,6 @@
 {
   "name": "openmc-launcher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "OpenMC — Launcher Minecraft communautaire",
   "main": "dist-electron/main/index.js",
   "author": "OpenMC",
